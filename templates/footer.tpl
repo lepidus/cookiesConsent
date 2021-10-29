@@ -3,20 +3,18 @@
 window.cookieconsent.initialise({
   "palette": {
     "popup": {
-      "background": "#da2a65",
-      "text": "#ffffff"
+      "background": "#000",
     },
     "button": {
-      "background": "#e7bd11",
-      "text": "#000000"
+      "background": "#f1d600",
     }
   },
   "theme": "classic",
   "content": {
-    "message": "Essa é a mensagem de aviso de cookies",
-    "dismiss": "Botão de aceitar",
-    "link": "Link política privacidade",
-    "href": "https://localhost.com/index.php/quaqua/index"
+    "message": "{translate key="plugins.generic.cookiesConsent.description.message"}",
+    "dismiss": "{translate key="plugins.generic.cookiesConsent.description.dismiss"}",
+    "link": "{translate key="about.privacyStatement"}",
+    "href": "{url router=$smarty.const.ROUTE_PAGE context=$context->getPath() page="about" op="privacy"}"
   }
 });
 </script>

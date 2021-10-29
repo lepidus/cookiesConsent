@@ -12,7 +12,13 @@ msgstr ""
 "Language: \n"
 
 msgid "plugins.generic.cookiesConsent.displayName"
-msgstr ""
+msgstr "Cookies Consent"
 
 msgid "plugins.generic.cookiesConsent.description"
 msgstr ""
+
+msgid "plugins.generic.cookiesConsent.description.message"
+msgstr "This website uses cookies to ensure your best experience"
+
+msgid "plugins.generic.cookiesConsent.description.dismiss"
+msgstr "Accept"

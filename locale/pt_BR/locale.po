@@ -12,7 +12,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "plugins.generic.cookiesConsent.displayName"
-msgstr ""
+msgstr "Consentimento de Cookies"
 
 msgid "plugins.generic.cookiesConsent.description"
 msgstr ""
+
+msgid "plugins.generic.cookiesConsent.description.message"
+msgstr "Este site utiliza cookies para garantir a sua melhor experiência"
+
+msgid "plugins.generic.cookiesConsent.description.dismiss"
+msgstr "Aceitar"

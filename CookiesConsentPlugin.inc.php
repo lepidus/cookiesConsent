@@ -48,7 +48,9 @@ class CookiesConsentPlugin extends GenericPlugin {
 	public function insertInFooter($hookName, $params) {
 		$templateMgr =& $params[1];
 		$output =& $params[2];
-
+		$request = Application::get()->getRequest();
+		
+		$templateMgr->assign(['context' => $request->getContext()]);
 		$output .= $templateMgr->fetch($this->getTemplateResource('footer.tpl'));
 		return false;
 	}
