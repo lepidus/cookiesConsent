@@ -13,12 +13,15 @@
 import('lib.pkp.classes.plugins.GenericPlugin');
 class CookiesConsentPlugin extends GenericPlugin {
 
+	var $headerWasInjected = false;
+
 	public function register($category, $path, $mainContextId = NULL) {
 		$success = parent::register($category, $path, $mainContextId);
 		
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
 		if ($success && $this->getEnabled($mainContextId)) {
-
+			HookRegistry::register('TemplateManager::display', array($this, 'insertInHeader'));
+			HookRegistry::register('Templates::Common::Footer::PageFooter', array($this, 'insertInFooter'));
 		}
 		return $success;
 	}
@@ -32,4 +35,21 @@ class CookiesConsentPlugin extends GenericPlugin {
 	}
 
 
+	public function insertInHeader($hookName, $params) {
+		if (!$this->headerWasInjected) {
+			$templateMgr =& $params[0];
+			$header = $templateMgr->fetch($this->getTemplateResource('header.tpl'));
+			$templateMgr->addHeader('cookiesConsentHeader', $header);
+			$this->headerWasInjected = true;
+		}
+		return false;
+	}
+
+	public function insertInFooter($hookName, $params) {
+		$templateMgr =& $params[1];
+		$output =& $params[2];
+
+		$output .= $templateMgr->fetch($this->getTemplateResource('footer.tpl'));
+		return false;
+	}
 }
