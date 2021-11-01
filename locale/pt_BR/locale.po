@@ -15,7 +15,7 @@ msgid "plugins.generic.cookiesConsent.displayName"
 msgstr "Consentimento de Cookies"
 
 msgid "plugins.generic.cookiesConsent.description"
-msgstr ""
+msgstr "Este plugin exibe uma mensagem sobre uso de cookies neste site"
 
 msgid "plugins.generic.cookiesConsent.description.message"
 msgstr "Este site utiliza cookies para garantir a sua melhor experiência"
