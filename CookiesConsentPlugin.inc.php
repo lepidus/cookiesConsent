@@ -57,7 +57,6 @@ class CookiesConsentPlugin extends GenericPlugin
         $output =& $params[2];
         $request = Application::get()->getRequest();
 
-        $templateMgr->assign(['context' => $request->getContext()]);
         $output .= $templateMgr->fetch($this->getTemplateResource('footer.tpl'));
         return false;
     }
