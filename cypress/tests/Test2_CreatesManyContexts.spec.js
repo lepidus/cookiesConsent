@@ -21,6 +21,6 @@ describe('Creates many contexts', function() {
 		cy.get('input[name=urlPath]').type('publicknowledge2', {delay: 0});
 
 		cy.get('button').contains('Save').click();
-        cy.wait(1000);
+        cy.wait(15000);
 	});
 })

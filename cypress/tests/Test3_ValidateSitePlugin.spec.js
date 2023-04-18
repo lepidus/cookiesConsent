@@ -3,6 +3,7 @@ const adminPassword = Cypress.env('adminPassword');
 
 describe('Validates site plugin', function() {
   it('Enables plugin in site settings', function() {
+    cy.login(admin, adminPassword);
     cy.visit('/');
     cy.get('a:contains("journal2"):visible').click();
     cy.get('a:contains(' + admin + '):visible').click();
@@ -31,7 +32,7 @@ describe('Validates site plugin', function() {
   });
 
   it('Shows the cookies consent plugin in site homepage', function() {
-    cy.visit('/');
+    cy.login(admin, adminPassword);
     cy.get('.cc-window').should('be.visible');
     cy.get('.cc-window')
       .contains(
