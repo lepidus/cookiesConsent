@@ -11,7 +11,7 @@ describe('Test with many contexts', function() {
 		cy.wait(1000);
 		cy.get('input[name="name-en_US"]').type('journal2', {delay: 0});
 		cy.get('input[name=acronym-en_US]').type('JPK', {delay: 0});
-		cy.get('span').contains('Enable this journal').siblings('input').check();
+		cy.get('span').contains('Enable').siblings('input').check();
 		cy.get('input[name="supportedLocales"][value="en_US').check();
 		cy.get('input[name="primaryLocale"][value="en_US').check();
 
