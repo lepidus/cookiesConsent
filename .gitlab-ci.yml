@@ -10,4 +10,6 @@ include:
 
 integration_tests:
   before_script:
+    - export CYPRESS_adminUser="admin"
+    - export CYPRESS_adminPassword="admin"
     - export CYPRESS_context="publicknowledge"
