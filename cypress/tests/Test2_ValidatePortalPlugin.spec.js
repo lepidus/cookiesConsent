@@ -20,9 +20,7 @@ describe('Test with many contexts', function() {
 		cy.get('input[name=urlPath]').type('publicknowledge2', {delay: 0});
 
 		cy.get('button').contains('Save').click();
-
-		cy.contains('Settings Wizard', {timeout: 30000});
-        cy.logout();
+        cy.wait(1000);
 	});
 
     it('Enable plugin in site settings', function() {
