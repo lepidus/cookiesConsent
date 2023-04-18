@@ -22,6 +22,7 @@ describe('Test with many contexts', function() {
 		cy.get('button').contains('Save').click();
 
 		cy.contains('Settings Wizard', {timeout: 30000});
+        cy.logout();
 	});
 
     it('Enable plugin in site settings', function() {
@@ -52,7 +53,7 @@ describe('Test with many contexts', function() {
         cy.logout();
 	});
 
-    it('Show the keyword cloud plugin in site homepage', function() {
+    it('Show the cookies consent plugin in site homepage', function() {
 		cy.login(admin, adminPassword);
         cy.get('.cc-window').should('be.visible');
         cy.get('.cc-window').contains('This website uses cookies to ensure your best experience Privacy Statement');

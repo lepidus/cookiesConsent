@@ -28,7 +28,7 @@ describe('Starts and View the block plugin', function() {
     cy.logout();
   });
 
-  it('Show the keyword cloud plugin in homepage', function() {
+  it('Show the cookies consent plugin in homepage', function() {
     cy.login(admin, adminPassword, context);
     cy.get('.app__contextTitle').click();
     cy.get('.cc-window').should('be.visible');
