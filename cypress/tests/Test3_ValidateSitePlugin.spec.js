@@ -3,7 +3,7 @@ const adminPassword = Cypress.env('adminPassword');
 
 describe('Validates site plugin', function() {
   it('Enables plugin in site settings', function() {
-    cy.login(admin, adminPassword);
+    cy.visit('/');
     cy.get('a:contains("journal2"):visible').click();
     cy.get('a:contains(' + admin + '):visible').click();
     cy.get('a:contains("Dashboard"):visible').click();
