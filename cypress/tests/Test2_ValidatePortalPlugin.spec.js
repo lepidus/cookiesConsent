@@ -4,7 +4,9 @@ const adminPassword = Cypress.env('adminPassword');
 describe('Test with many contexts', function() {
 	it('Creates a context', function() {
 		cy.login(admin, adminPassword);
-        cy.visit('/index.php/index/admin');
+        cy.get('a:contains(' + admin + '):visible').click();
+        cy.get('a:contains("Dashboard"):visible').click();
+        cy.get('.app__nav a').contains('Administration').click();
         cy.get(':nth-child(2) > :nth-child(1) > a').click();
 		cy.get('div[id=contextGridContainer]').find('a').contains('Create').click();
 
@@ -24,7 +26,13 @@ describe('Test with many contexts', function() {
 
     it('Enable plugin in site settings', function() {
 		cy.login(admin, adminPassword);
-        cy.visit('/index.php/index/admin/settings#plugins');
+        cy.get('a:contains("journal2"):visible').click();
+        cy.get('a:contains(' + admin + '):visible').click();
+        cy.get('a:contains("Dashboard"):visible').click();
+        cy.get('.app__nav a').contains('Administration').click();
+        cy.get('a:contains("Site Settings"):visible').click();
+        cy.get('button[id="plugins-button"]').click();
+
         cy.get('body').then(($body) => {
             if (
                 !(
