@@ -1,13 +1,10 @@
 const admin = Cypress.env('adminUser');
 const adminPassword = Cypress.env('adminPassword');
+const newContext = "publicknowledge2"
 
 describe('Validates site plugin', function() {
   it('Enables plugin in site settings', function() {
-    cy.login(admin, adminPassword);
-    cy.visit('/');
-    cy.get('a:contains("journal2"):visible').click();
-    cy.get('a:contains(' + admin + '):visible').click();
-    cy.get('a:contains("Dashboard"):visible').click();
+    cy.login(admin, adminPassword, newContext);
     cy.get('.app__nav a').contains('Administration').click();
     cy.get('a:contains("Site Settings"):visible').click();
     cy.get('button[id="plugins-button"]').click();
@@ -29,10 +26,10 @@ describe('Validates site plugin', function() {
       }
     });
     cy.logout();
+    cy.get('.is_img > img').click();
   });
 
   it('Shows the cookies consent plugin in site homepage', function() {
-    cy.login(admin, adminPassword);
     cy.get('.cc-window').should('be.visible');
     cy.get('.cc-window')
       .contains(
