@@ -26,7 +26,6 @@ describe('Validates site plugin', function() {
       }
     });
     cy.logout();
-    cy.get('.is_img > img').click();
     cy.get('.cc-window').should('be.visible');
     cy.get('.cc-window')
       .contains(
