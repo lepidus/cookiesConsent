@@ -3,7 +3,7 @@ const adminPassword = Cypress.env('adminPassword');
 const newContext = "publicknowledge2"
 
 describe('Validates site plugin', function() {
-  it('Enables plugin in site settings', function() {
+  it('Enables plugin in site settings and show cookie consent', function() {
     cy.login(admin, adminPassword, newContext);
     cy.get('.app__nav a').contains('Administration').click();
     cy.get('a:contains("Site Settings"):visible').click();
@@ -27,9 +27,6 @@ describe('Validates site plugin', function() {
     });
     cy.logout();
     cy.get('.is_img > img').click();
-  });
-
-  it('Shows the cookies consent plugin in site homepage', function() {
     cy.get('.cc-window').should('be.visible');
     cy.get('.cc-window')
       .contains(
