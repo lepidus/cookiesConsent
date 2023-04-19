@@ -6,3 +6,10 @@ include:
     ref: main
     file:
       - 'templates/groups/pkp_plugin.yml'
+      - 'templates/groups/ops_plugins_cypress_tests_model.yml'
+
+integration_tests:
+  before_script:
+    - export CYPRESS_adminUser="admin"
+    - export CYPRESS_adminPassword="admin"
+    - export CYPRESS_context="publicknowledge"
