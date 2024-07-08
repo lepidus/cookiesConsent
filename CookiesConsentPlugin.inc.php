@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file plugins/generic/cookiesConsent/CookiesConsentPlugin.inc.php
  *
@@ -11,6 +12,7 @@
  */
 
 import('lib.pkp.classes.plugins.GenericPlugin');
+
 class CookiesConsentPlugin extends GenericPlugin
 {
     public $headerWasInjected = false;
@@ -43,7 +45,7 @@ class CookiesConsentPlugin extends GenericPlugin
     public function insertInHeader($hookName, $params)
     {
         if (!$this->headerWasInjected) {
-            $templateMgr =& $params[0];
+            $templateMgr = & $params[0];
             $header = $templateMgr->fetch($this->getTemplateResource('header.tpl'));
             $templateMgr->addHeader('cookiesConsentHeader', $header);
             $this->headerWasInjected = true;
@@ -53,8 +55,8 @@ class CookiesConsentPlugin extends GenericPlugin
 
     public function insertInFooter($hookName, $params)
     {
-        $templateMgr =& $params[1];
-        $output =& $params[2];
+        $templateMgr = & $params[1];
+        $output = & $params[2];
         $request = Application::get()->getRequest();
 
         $output .= $templateMgr->fetch($this->getTemplateResource('footer.tpl'));
