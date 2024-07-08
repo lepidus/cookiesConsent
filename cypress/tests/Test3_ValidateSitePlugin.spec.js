@@ -1,5 +1,5 @@
-const admin = Cypress.env('adminUser');
-const adminPassword = Cypress.env('adminPassword');
+const admin = Cypress.env('adminUser') ?? 'admin';
+const adminPassword = Cypress.env('adminPassword') ?? 'admin';
 const newContext = "publicknowledge2"
 
 describe('Validates site plugin', function() {

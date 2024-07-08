@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @defgroup plugins_generic_cookiesConsent
  */
@@ -12,5 +13,6 @@
  * @brief Wrapper for the Cookies Consent plugin.
  *
  */
+
 require_once('CookiesConsentPlugin.inc.php');
 return new CookiesConsentPlugin();

@@ -1,6 +1,6 @@
-const admin = Cypress.env('adminUser');
-const adminPassword = Cypress.env('adminPassword');
-const context = Cypress.env('context');
+const admin = Cypress.env('adminUser') ?? 'admin';
+const adminPassword = Cypress.env('adminPassword') ?? 'admin';
+const context = Cypress.env('context') ?? 'publicknowledge';
 
 describe('Starts and View the block plugin', function() {
   it('Activate Plugin', function() {

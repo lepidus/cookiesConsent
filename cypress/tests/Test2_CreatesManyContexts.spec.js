@@ -1,5 +1,5 @@
-const admin = Cypress.env('adminUser');
-const adminPassword = Cypress.env('adminPassword');
+const admin = Cypress.env('adminUser') ?? 'admin';
+const adminPassword = Cypress.env('adminPassword') ?? 'admin';
 
 describe('Creates many contexts', function() {
 	it('Creates a context', function() {
