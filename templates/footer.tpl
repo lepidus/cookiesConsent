@@ -13,7 +13,7 @@ window.cookieconsent.initialise({
   "content": {
     "message": "{translate key="plugins.generic.cookiesConsent.description.message"}",
     "dismiss": "{translate key="plugins.generic.cookiesConsent.description.dismiss"}",
-    "link": "{translate key="about.privacyStatement"}",
+    "link": "{translate key="about.privacyStatement"}.",
     "href": "{url router=$smarty.const.ROUTE_PAGE page="about" op="privacy"}"
   }
 });
