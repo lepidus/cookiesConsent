@@ -29,7 +29,7 @@ describe('Validates site plugin', function() {
     cy.get('.cc-window').should('be.visible');
     cy.get('.cc-window')
       .contains(
-        'This website uses cookies to ensure your best experience Privacy Statement'
+        'We use cookies to enhance your experience on our website. By continuing to browse, you agree to our Privacy Statement'
       )
       .should('be.visible');
     cy.get('.cc-btn').should('be.visible');
