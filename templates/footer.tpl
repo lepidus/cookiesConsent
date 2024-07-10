@@ -1,20 +1,57 @@
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+
 <script>
 window.cookieconsent.initialise({
   "palette": {
     "popup": {
-      "background": "rgba(64,64,64,.9)",
+      "background": "rgba(64,64,64,.9)"
     },
     "button": {
-      "background": "#f1d600",
+      "background": "#f1d600"
     }
   },
   "theme": "classic",
-  "content": {
-    "message": "{translate key="plugins.generic.cookiesConsent.description.message"}",
-    "dismiss": "{translate key="plugins.generic.cookiesConsent.description.dismiss"}",
-    "link": "{translate key="about.privacyStatement"}.",
-    "href": "{url router=$smarty.const.ROUTE_PAGE page="about" op="privacy"}"
+  "elements": {
+    "messagelink": `
+                    <div class="cookieConsentContainer" style="width: 100%">
+                      <span id="cookieconsent:desc" class="cc-message">
+                        {translate key='plugins.generic.cookiesConsent.description.message'}
+                        <a aria-label="{translate key='about.privacyStatement'}" tabindex="0" class="cc-link" href="{url router=$smarty.const.ROUTE_PAGE page='about' op='privacy'}" target="_blank">
+                          {translate key='about.privacyStatement'}
+                        </a>.
+                        <br>
+                        <a id="cookie-settings-link" class="cc-link" style="text-decoration:underline;" href="#">
+                          Configuração de cookies
+                        </a>
+                      </span>
+                      <div id="cookie-settings" class="info" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;">
+                        <p>
+                          <a class="cc-link" href="{url router=$smarty.const.ROUTE_PAGE page='about' op='privacy'}" target="_blank">Ler a nossa Política de Privacidade</a><br>
+                          Você pode desabilitá-los alterando as configurações do seu navegador:
+                        </p>
+                        <ul>
+                          <li><a class="cc-link" href="https://support.google.com/chrome/answer/95647" target="_blank">Chrome</a></li>
+                          <li><a class="cc-link" href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank">Firefox</a></li>
+                          <li><a class="cc-link" href="https://support.microsoft.com/en-us/help/4027947/microsoft-edge-delete-cookies" target="_blank">Microsoft Edge</a></li>
+                        </ul>
+                      </div>
+                    </div>`
   }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var settingsLink = document.getElementById('cookie-settings-link');
+  var settingsContent = document.getElementById('cookie-settings');
+
+  settingsLink.addEventListener('click', function(event) {
+    event.preventDefault();
+    if (settingsContent.style.maxHeight === '0px' || settingsContent.style.maxHeight === '') {
+      settingsContent.style.maxHeight = settingsContent.scrollHeight + 'px';
+    } else {
+      settingsContent.style.maxHeight = '0px';
+    }
+  });
 });
 </script>
