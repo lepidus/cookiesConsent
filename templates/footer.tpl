@@ -11,6 +11,9 @@ window.cookieconsent.initialise({
     }
   },
   "theme": "classic",
+  "content": {
+    "dismiss": "{translate key="plugins.generic.cookiesConsent.description.dismiss"}"
+  },
   "elements": {
     "messagelink": `
                     <div class="cookieConsentContainer" style="width: 100%">
@@ -31,8 +34,8 @@ window.cookieconsent.initialise({
                         </p>
                         <ul>
                           <li><a class="cc-link" href="https://support.google.com/chrome/answer/95647" target="_blank">Chrome</a></li>
-                          <li><a class="cc-link" href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank">Firefox</a></li>
-                          <li><a class="cc-link" href="https://support.microsoft.com/en-us/help/4027947/microsoft-edge-delete-cookies" target="_blank">Microsoft Edge</a></li>
+                          <li><a class="cc-link" href="https://support.mozilla.org/kb/enable-and-disable-cookies-website-preferences" target="_blank">Firefox</a></li>
+                          <li><a class="cc-link" href="https://support.microsoft.com/help/4027947/microsoft-edge-delete-cookies" target="_blank">Microsoft Edge</a></li>
                         </ul>
                       </div>
                     </div>`
