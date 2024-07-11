@@ -1,6 +1,6 @@
 const admin = Cypress.env('adminUser') ?? 'admin';
 const adminPassword = Cypress.env('adminPassword') ?? 'admin';
-const newContext = "publicknowledge2"
+const newContext = "testspublicknowledge2"
 
 describe('Validates site plugin', function() {
   it('Enables plugin in site settings and show cookie consent', function() {
