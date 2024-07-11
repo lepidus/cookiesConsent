@@ -11,11 +11,12 @@
  *
  */
 
-namespace APP\plugins\generic\OASwitchboard;
+namespace APP\plugins\generic\cookiesConsent;
 
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
 use APP\core\Application;
+use PKP\config\Config;
 
 class CookiesConsentPlugin extends GenericPlugin
 {
