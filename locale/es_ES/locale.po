@@ -18,7 +18,16 @@ msgid "plugins.generic.cookiesConsent.description"
 msgstr "Este módulo muestra un mensaje sobre el uso de cookies en este sitio"
 
 msgid "plugins.generic.cookiesConsent.description.message"
-msgstr "Este sitio web utiliza cookies para garantizar su mejor experiencia."
+msgstr "Usamos cookies para mejorar su experiencia en nuestro sitio web. Al continuar navegando, usted acepta nuestra"
+
+msgid "plugins.generic.cookiesConsent.description.cookiesConfiguration"
+msgstr "Configuración de cookies"
+
+msgid "plugins.generic.cookiesConsent.description.readOurPrivacyStatement"
+msgstr "Leer nuestra Política de Privacidad"
+
+msgid "plugins.generic.cookiesConsent.description.disableCookies"
+msgstr "Puede deshabilitarlos cambiando la configuración de su navegador:"
 
 msgid "plugins.generic.cookiesConsent.description.dismiss"
 msgstr "Aceptar"

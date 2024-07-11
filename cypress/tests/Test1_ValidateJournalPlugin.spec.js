@@ -32,7 +32,7 @@ describe('Starts and View the block plugin', function() {
     cy.login(admin, adminPassword, context);
     cy.get('.app__contextTitle').click();
     cy.get('.cc-window').should('be.visible');
-    cy.get('.cc-window').contains('This website uses cookies to ensure your best experience Privacy Statement');
+    cy.get('.cc-window').contains('We use cookies to enhance your experience on our website. By continuing to browse, you agree to our Privacy Statement');
     cy.get('.cc-btn').should('be.visible');
   });
 });

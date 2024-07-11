@@ -1,0 +1,19 @@
+.cc-window.cc-banner {
+    padding-left: 50pt;
+    padding-right: 50pt;
+}
+  
+.cookieConsentContainer {
+    width: 100%;
+}
+
+#cookie-settings {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.cc-link {
+    text-decoration: underline;
+}
+  
