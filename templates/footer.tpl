@@ -16,7 +16,7 @@ window.cookieconsent.initialise({
   },
   "elements": {
     "messagelink": `
-                    <div class="cookieConsentContainer" style="width: 100%">
+                    <div class="cookieConsentContainer" style="width: 100%;">
                       <span id="cookieconsent:desc" class="cc-message">
                         {translate key='plugins.generic.cookiesConsent.description.message'}
                         <a aria-label="{translate key='about.privacyStatement'}" tabindex="0" class="cc-link" href="{url router=$smarty.const.ROUTE_PAGE page='about' op='privacy'}" target="_blank">
@@ -58,3 +58,10 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+
+<style>
+  .cc-window.cc-banner {
+    padding-left: 50pt;
+    padding-right: 50pt;
+  }
+</style>
