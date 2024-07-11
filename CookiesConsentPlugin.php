@@ -11,7 +11,11 @@
  *
  */
 
-import('lib.pkp.classes.plugins.GenericPlugin');
+namespace APP\plugins\generic\OASwitchboard;
+
+use PKP\plugins\GenericPlugin;
+use PKP\plugins\Hook;
+use APP\core\Application;
 
 class CookiesConsentPlugin extends GenericPlugin
 {
@@ -25,8 +29,8 @@ class CookiesConsentPlugin extends GenericPlugin
             return true;
         }
         if ($success && $this->getEnabled($mainContextId)) {
-            HookRegistry::register('TemplateManager::display', array($this, 'addResources'));
-            HookRegistry::register('Templates::Common::Footer::PageFooter', array($this, 'insertInFooter'));
+            Hook::add('TemplateManager::display', array($this, 'addResources'));
+            Hook::add('Templates::Common::Footer::PageFooter', array($this, 'insertInFooter'));
         }
         return $success;
     }
