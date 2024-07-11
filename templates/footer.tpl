@@ -21,19 +21,19 @@
 </script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  var settingsLink = document.getElementById('cookie-settings-link');
-  var settingsContent = document.getElementById('cookie-settings');
+  document.addEventListener('DOMContentLoaded', function() {
+    var settingsLink = document.getElementById('cookie-settings-link');
+    var settingsContent = document.getElementById('cookie-settings');
 
-  settingsLink.addEventListener('click', function(event) {
-    event.preventDefault();
-    if (settingsContent.style.maxHeight === '0px' || settingsContent.style.maxHeight === '') {
-      settingsContent.style.maxHeight = settingsContent.scrollHeight + 'px';
-    } else {
-      settingsContent.style.maxHeight = '0px';
-    }
+    settingsLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      if (settingsContent.style.maxHeight === '0px' || settingsContent.style.maxHeight === '') {
+        settingsContent.style.maxHeight = settingsContent.scrollHeight + 'px';
+      } else {
+        settingsContent.style.maxHeight = '0px';
+      }
+    });
   });
-});
 </script>
 
 <style>
