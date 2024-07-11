@@ -58,6 +58,8 @@ class CookiesConsentPlugin extends GenericPlugin
         $templateMgr = & $params[1];
         $output = & $params[2];
         $request = Application::get()->getRequest();
+        $bannerTemplatePath = $this->getTemplateResource('banner.tpl');
+        $templateMgr->assign("bannerTemplatePath", $bannerTemplatePath);
 
         $output .= $templateMgr->fetch($this->getTemplateResource('footer.tpl'));
         return false;
