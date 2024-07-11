@@ -11,8 +11,8 @@
 <version>
 	<application>cookiesConsent</application>
 	<type>plugins.generic</type>
-	<release>1.0.1.0</release>
-	<date>2023-04-17</date>
+	<release>1.0.2.0</release>
+	<date>2024-07-11</date>
 	<lazy-load>1</lazy-load>
 	<class>CookiesConsentPlugin</class>
 </version>
