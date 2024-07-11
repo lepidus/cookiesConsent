@@ -1,23 +1,23 @@
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 
 <script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "rgba(64,64,64,.9)"
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "rgba(64,64,64,.9)"
+      },
+      "button": {
+        "background": "#f1d600"
+      }
     },
-    "button": {
-      "background": "#f1d600"
+    "theme": "classic",
+    "content": {
+      "dismiss": "{translate key="plugins.generic.cookiesConsent.description.dismiss"}"
+    },
+    "elements": {
+      "messagelink": `{include file=$bannerTemplatePath}`
     }
-  },
-  "theme": "classic",
-  "content": {
-    "dismiss": "{translate key="plugins.generic.cookiesConsent.description.dismiss"}"
-  },
-  "elements": {
-    "messagelink": `{include file=$bannerTemplatePath}`
-  }
-});
+  });
 </script>
 
 <script>
