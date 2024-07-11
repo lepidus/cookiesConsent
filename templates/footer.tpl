@@ -35,10 +35,3 @@
     });
   });
 </script>
-
-<style>
-  .cc-window.cc-banner {
-    padding-left: 50pt;
-    padding-right: 50pt;
-  }
-</style>

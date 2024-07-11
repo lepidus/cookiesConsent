@@ -25,7 +25,7 @@ class CookiesConsentPlugin extends GenericPlugin
             return true;
         }
         if ($success && $this->getEnabled($mainContextId)) {
-            HookRegistry::register('TemplateManager::display', array($this, 'insertInHeader'));
+            HookRegistry::register('TemplateManager::display', array($this, 'addResources'));
             HookRegistry::register('Templates::Common::Footer::PageFooter', array($this, 'insertInFooter'));
         }
         return $success;
@@ -42,11 +42,14 @@ class CookiesConsentPlugin extends GenericPlugin
     }
 
 
-    public function insertInHeader($hookName, $params)
+    public function addResources($hookName, $params)
     {
         if (!$this->headerWasInjected) {
             $templateMgr = & $params[0];
+            $request = Application::get()->getRequest();
             $header = $templateMgr->fetch($this->getTemplateResource('header.tpl'));
+            $styleSheetUrl = $request->getBaseUrl() . '/' . $this->getPluginPath() . '/styles/cookiesConsent.css';
+            $templateMgr->addStyleSheet('cookiesConsentCSS', $styleSheetUrl);
             $templateMgr->addHeader('cookiesConsentHeader', $header);
             $this->headerWasInjected = true;
         }

@@ -1,15 +1,15 @@
-<div class="cookieConsentContainer" style="width: 100%;">
+<div class="cookieConsentContainer">
     <span id="cookieconsent:desc" class="cc-message">
         {translate key='plugins.generic.cookiesConsent.description.message'}
         <a aria-label="{translate key='about.privacyStatement'}" tabindex="0" class="cc-link" href="{url router=$smarty.const.ROUTE_PAGE page='about' op='privacy'}" target="_blank">
             {translate key='about.privacyStatement'}
         </a>.
         <br>
-        <a id="cookie-settings-link" class="cc-link" style="text-decoration:underline;">
+        <a id="cookie-settings-link" class="cc-link">
             {translate key='plugins.generic.cookiesConsent.description.cookiesConfiguration'}
         </a>
     </span>
-    <div id="cookie-settings" class="info" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;">
+    <div id="cookie-settings" class="info">
         <p>
             <a class="cc-link" href="{url router=$smarty.const.ROUTE_PAGE page='about' op='privacy'}" target="_blank">
                 {translate key='plugins.generic.cookiesConsent.description.readOurPrivacyStatement'}
