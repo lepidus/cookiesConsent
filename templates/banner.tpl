@@ -5,14 +5,16 @@
         {translate key='about.privacyStatement'}
     </a>.
     <br>
-    <a id="cookie-settings-link" class="cc-link" style="text-decoration:underline;" href="#">
-        Configuração de cookies
+    <a id="cookie-settings-link" class="cc-link" style="text-decoration:underline;">
+        {translate key='plugins.generic.cookiesConsent.description.cookiesConfiguration'}
     </a>
     </span>
     <div id="cookie-settings" class="info" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;">
     <p>
-        <a class="cc-link" href="{url router=$smarty.const.ROUTE_PAGE page='about' op='privacy'}" target="_blank">Ler a nossa Política de Privacidade</a><br>
-        Você pode desabilitá-los alterando as configurações do seu navegador:
+        <a class="cc-link" href="{url router=$smarty.const.ROUTE_PAGE page='about' op='privacy'}" target="_blank">
+            {translate key='plugins.generic.cookiesConsent.description.readOurPrivacyStatement'}
+        </a><br>
+        {translate key='plugins.generic.cookiesConsent.description.disableCookies'}
     </p>
     <ul>
         <li><a class="cc-link" href="https://support.google.com/chrome/answer/95647" target="_blank">Chrome</a></li>

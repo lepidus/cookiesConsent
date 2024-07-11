@@ -20,5 +20,14 @@ msgstr "This plugin displays a message about the use of cookies on this site"
 msgid "plugins.generic.cookiesConsent.description.message"
 msgstr "We use cookies to enhance your experience on our website. By continuing to browse, you agree to our"
 
+msgid "plugins.generic.cookiesConsent.description.cookiesConfiguration"
+msgstr "Cookies Settings"
+
+msgid "plugins.generic.cookiesConsent.description.readOurPrivacyStatement"
+msgstr "Read our Privacy Policy"
+
+msgid "plugins.generic.cookiesConsent.description.disableCookies"
+msgstr "You can disable them by changing your browser settings:"
+
 msgid "plugins.generic.cookiesConsent.description.dismiss"
 msgstr "Accept"
