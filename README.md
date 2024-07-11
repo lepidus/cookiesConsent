@@ -19,4 +19,4 @@ The latest release of this plugin is compatible with the following PKP applicati
 # License
 __This plugin is licensed under the GNU General Public License v3.0__
 
-__Copyright (c) 2021-2023 Lepidus Tecnologia__
+__Copyright (c) 2021-2024 Lepidus Tecnologia__
