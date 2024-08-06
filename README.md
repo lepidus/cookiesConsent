@@ -7,6 +7,7 @@ This plugin provides a banner that appears at the bottom of the website, allowin
 The latest release of this plugin is compatible with the following PKP applications:
 
 * OJS 3.4.0
+* OMP 3.4.0
 
 ## Installation
 
